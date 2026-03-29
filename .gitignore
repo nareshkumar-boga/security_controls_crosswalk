@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Generated output
+output/report.md
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
