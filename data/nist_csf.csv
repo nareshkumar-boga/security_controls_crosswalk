@@ -1,6 +1,6 @@
 framework,control_id,title,description,domain,tags
-NIST CSF,ID.AM-01,Asset Inventory,Maintain an inventory of hardware software and service assets across the environment,Asset Management,asset; inventory; risk; monitoring
-NIST CSF,PR.AC-01,Identity And Access Management,Manage identities and enforce access controls for users accounts and privileged roles,Protect,access; identity; authentication; authorization
-NIST CSF,DE.CM-01,Security Logging And Monitoring,Collect logs and monitor systems network activity and security events for detection,Detect,logging; monitoring; network; incident
-NIST CSF,PR.IP-01,Vulnerability Management,Identify assess and remediate vulnerabilities in systems and applications,Protect,vulnerability; risk; asset; monitoring
-NIST CSF,RS.AN-01,Incident Analysis,Analyze detected events to support investigation triage and response actions,Respond,incident; logging; monitoring; risk
+NIST CSF,ID.AM-01,Asset Inventory Management,Maintain an inventory of hardware software cloud and data assets with clear ownership,Asset Management,asset; inventory; risk; governance
+NIST CSF,PR.AC-01,Identity And Access Control,Enforce account lifecycle and privileged access controls with strong identity verification,Protect,access; identity; authentication; authorization
+NIST CSF,DE.CM-01,Continuous Security Monitoring,Collect and analyze security telemetry across endpoints servers and network segments,Detect,logging; monitoring; network; detection
+NIST CSF,PR.IP-01,Technical Vulnerability Management,Identify assess prioritize and remediate technical vulnerabilities in systems and applications,Protect,vulnerability; risk; asset; remediation
+NIST CSF,RS.RP-01,Incident Response Planning,Define and maintain incident response playbooks for triage containment eradication and recovery,Respond,incident response; monitoring; logging; risk

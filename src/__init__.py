@@ -1,1 +1,1 @@
-"""Core package for the control crosswalk project."""
+"""Core package for security control crosswalk utilities."""

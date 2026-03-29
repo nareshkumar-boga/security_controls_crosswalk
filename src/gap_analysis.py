@@ -24,6 +24,7 @@ def summarize_results(
 ) -> Dict[str, Any]:
     """Build a summary dictionary for reporting."""
     gaps = find_unmapped_source_controls(source_controls, mappings)
+    mapped_source_count = len(source_controls) - len(gaps)
     source_framework = source_controls[0]["framework"] if source_controls else "Unknown"
     target_framework = target_controls[0]["framework"] if target_controls else "Unknown"
 
@@ -32,6 +33,7 @@ def summarize_results(
         "target_framework": target_framework,
         "total_source_controls": len(source_controls),
         "total_target_controls": len(target_controls),
+        "mapped_source_controls": mapped_source_count,
         "total_mappings": len(mappings),
         "total_gaps": len(gaps),
         "gaps": gaps,

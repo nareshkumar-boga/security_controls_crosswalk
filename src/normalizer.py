@@ -17,11 +17,13 @@ def normalize_tags(raw_tags: str) -> List[str]:
     if not raw_tags.strip():
         return []
 
-    tags = []
+    tags: List[str] = []
+    seen = set()
     for tag in raw_tags.split(";"):
         cleaned_tag = tag.strip().lower()
-        if cleaned_tag:
+        if cleaned_tag and cleaned_tag not in seen:
             tags.append(cleaned_tag)
+            seen.add(cleaned_tag)
     return tags
 
 

@@ -14,6 +14,13 @@ def score_confidence(shared_tag_count: int) -> str:
     return "Low"
 
 
+def _safe_tag_set(raw_tags: Any) -> set[str]:
+    """Build a normalized tag set from list-like values."""
+    if not isinstance(raw_tags, list):
+        return set()
+    return {str(tag).strip().lower() for tag in raw_tags if str(tag).strip()}
+
+
 def map_controls(
     source_controls: List[Dict[str, Any]],
     target_controls: List[Dict[str, Any]],
@@ -22,10 +29,12 @@ def map_controls(
     mappings: List[Dict[str, Any]] = []
 
     for source_control in source_controls:
-        source_tags = set(source_control["tags"])
+        source_tags = _safe_tag_set(source_control.get("tags"))
+        if not source_tags:
+            continue
 
         for target_control in target_controls:
-            target_tags = set(target_control["tags"])
+            target_tags = _safe_tag_set(target_control.get("tags"))
             shared_tags = sorted(source_tags.intersection(target_tags))
 
             if not shared_tags:
